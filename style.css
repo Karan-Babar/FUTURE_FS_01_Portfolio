@@ -30,6 +30,9 @@ body{
     color: #fff;
     text-decoration: none;
     font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
 }
 
 .navbar a{
@@ -40,6 +43,9 @@ body{
     font-weight: 500;
     margin-left: 35px;
     transition: .3s;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
 
 .navbar a:hover{
@@ -68,6 +74,15 @@ body{
 .home-content h3 {
   font-size: 32px;
   font-weight: 700;
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: .7s;
+}
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
 }
 
 .home-content h1 {
@@ -75,10 +90,16 @@ body{
   font-weight: 700;
   color: #fff;
   margin: -3px 0;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1s;
 }
 
 .home-content p {
     font-size: 15px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
 }
 
 .home-content span {
@@ -97,14 +118,14 @@ body{
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid #00bcd4; /* accent color */
-  box-shadow: 0 0 20px rgba(0, 188, 212, 0.8);
+  box-shadow: 0 0 50px rgba(0, 188, 212, 0.8);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-right: 100px;
 }
 
 .profile-photo img:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(0, 188, 212, 0.8);
+  box-shadow: 0 0 70px rgba(3, 218, 246, 0.8);
 }
 
 .home-sci a{
@@ -119,8 +140,12 @@ body{
     font-size: 20px;
     color: #0ef;
     text-decoration: none;
+    transition: .7s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
     margin: 30px 15px 30px 0;
-}
+} 
 
 .home-sci a:hover{
      background-color: #0ef;
@@ -138,8 +163,55 @@ body{
    letter-spacing: 1px;
    text-decoration: none;
    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,
+    0 0 10px #0ef;
 }
 
 .btn-box:hover{
     box-shadow: 0 0 20px cyan;
+}
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }

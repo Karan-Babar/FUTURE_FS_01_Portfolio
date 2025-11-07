@@ -12,15 +12,15 @@
     <header class="header">
      <a href="#" class="logo">Portfolio.</a>
      <nav class="navbar">
-        <a href="#" style="--i:1" class="active">Home</a>
-        <a href="#" style="--i:2">About</a>
-        <a href="#" style="--i:3">Skill</a>
-        <a href="#" style="--i:4">Projects</a>
-        <a href="#" style="--i:5">Contact</a>
+        <a href="#home" style="--i:1" class="active">Home</a>
+        <a href="#about" style="--i:2">About</a>
+        <a href="#skills" style="--i:3">Skill</a>
+        <a href="#projects" style="--i:4">Projects</a>
+        <a href="#Contact" style="--i:5">Contact</a>
      </nav>
 
     </header>
-     <section class="home">
+     <section class="home" id="home">
          <div class="home-content">
            <h3>Hello, It's Me</h3>
             <h1>Karan Babar</h1>
@@ -34,7 +34,7 @@
                  <a href="https://www.instagram.com/karan_babar96k/" target="_blank" rel="noopener noreferrer" style="--i:8 "><i class="fa-brands fa-square-instagram"></i></a>
 
               </div>
-              <a href="#" class="btn-box">More About Me</a>
+              <a href="#about" class="btn-box">More About Me</a>
          </div>
 
              <div class="profile-photo">
@@ -46,7 +46,7 @@
           <div class="about-photo">
                <img src="Karan profile photo.jpeg" alt="Karan Babar">
           </div> 
-          <div class="about-text">
+          <div class="about-text slideRight slideTop">
             <h2>About <span>Me</span></h2>
             <h4>Full Stack Developer!</h4>
             <p>I’m a skilled Full Stack Web Developer with a strong passion for creating dynamic, user-friendly, 
@@ -57,15 +57,15 @@
                I’m always eager to learn new technologies and take on challenging projects that push my technical and creative boundaries. 
                My goal is to deliver clean, scalable, and impactful web solutions that make a difference.</p>
 
-               <a href="#" class="btn-box">More About Me</a>
+               <a href="#skills" class="btn-box">More About Me</a>
           </div>  
      </section>
 
      <section>
-      <div class="services" id="services">
+      <div class="services" id="skills">
           <div class="container">
             <h1 class="sub-title">My <span>Services</span></h1>
-            <div class="services-list">
+            <div class="services-list slideLeft">
               <div style="--i:3">
                <i class="fa-solid fa-code" style="color: #00eeff;"></i>
                 <h2>Web Development</h2>
@@ -91,7 +91,7 @@
      <h1 class="sub-title">My <span>Skills</span></h1>
 
      <selection>
-       <div class="container1" id="skills">
+       <div class="container1 slideTop" id="skills">
         <div class="Technical-bars">
           <div class="bar" style="--i:4"><i style="color: #c95d2e;" class="fa-brands fa-html5"></i>
             <div class="info">
@@ -148,7 +148,7 @@
      <section class="projects" id="projects">
          <h1 class="sub-title">My <span>Projects</span></h1>
 
-  <div class="projects-container">
+  <div class="projects-container slideTop">
     <div class="project-box" style="--i:3">
       <video src="API project Video.mp4" autoplay loop muted playsinline></video>
       <h3>Currency-Converter_API</h3>
@@ -186,7 +186,7 @@
 
 <section class="Contact" id="Contact">
         <div class="contact-section">
-            <div class="left-content">
+            <div class="left-content slideLeft">
                 <h1>Contact <span class="highlight">Me</span></h1>
                 <h2>Let's Work Together</h2>
                 <p>"Interested in collaborating or have a project in mind? Reach out today to discuss how we can work together to achieve your goals. Dedicated to providing high-quality solutions and responsive communication, let's build something exceptional together."</p>
@@ -230,7 +230,7 @@
                 </div>
             </div>
 
-            <div class="right-content">
+            <div class="right-content slideRight">
                 <div class="form-group">
                     <input type="text" class="form-input" placeholder="Enter Your Name" aria-label="Your Name">
                 </div>
@@ -248,7 +248,7 @@
         </div>
 
     <footer>
-        Developed with love by Karan Babar © 2023
+        Developed with love by Karan Babar © 2025
     </footer>
 
     <button class="scroll-top" aria-label="Scroll to top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">

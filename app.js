@@ -46,3 +46,20 @@ var typed = new Typed(".text", {
                 alert('Please fill the Details.');
             }
         })
+
+// Select all elements that you want to animate on scroll
+const animatedElements = document.querySelectorAll('.slideLeft, .slideRight, .slideTop, .slideBottom');
+
+// Intersection Observer setup
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show'); // trigger animation when visible
+    } else {
+      entry.target.classList.remove('show'); // remove animation when out of view
+    }
+  });
+}, { threshold: 0.4 }); // 0.4 = triggers when 40% visible
+
+// Observe all animated elements
+animatedElements.forEach(el => observer.observe(el));

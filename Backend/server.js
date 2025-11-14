@@ -16,17 +16,14 @@ submitBtn.addEventListener('click', (e) => {
         return;
     }
 
-    // rest of your validation
 });
 
 
-// MongoDB Connection
 mongoose.connect("mongodb://127.0.0.1:27017/portfolioContact", {
 })
 .then(() => console.log("MongoDB Connected"))
 .catch(err => console.log(err));
 
-// Schema
 const messageSchema = new mongoose.Schema({
     name: String,
     email: String,
@@ -35,10 +32,8 @@ const messageSchema = new mongoose.Schema({
     date: { type: Date, default: Date.now }
 });
 
-// Model
 const Message = mongoose.model("Message", messageSchema);
 
-// Route
 app.post("/contact", async (req, res) => {
        console.log("Received Data:", req.body);
 
@@ -51,7 +46,6 @@ app.post("/contact", async (req, res) => {
     }
 });
 
-// Start server
 app.listen(5000, () => {
     console.log("Server running on port 5000");
 });

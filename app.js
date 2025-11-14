@@ -1,11 +1,9 @@
-// Handle form submission
 const submitBtn = document.querySelector('.submit-btn');
 const formInputs = document.querySelectorAll('.form-input, .form-textarea');
 const form = document.getElementById('contactForm');
 
 submitBtn.addEventListener('click', (e) => {
 
-    // Simple validation
     let isValid = true;
     formInputs.forEach(input => {
         if (!input.value.trim()) {
@@ -18,26 +16,24 @@ submitBtn.addEventListener('click', (e) => {
     });
 
     if (!isValid) {
-        e.preventDefault(); // stop the form ONLY if invalid
+        e.preventDefault();
         alert('Please fill the Details.');
     } 
-    // IF valid → allow form to submit normally → data goes to backend → MongoDB saves it
+   
 });
 
 
-// Select all elements that you want to animate on scroll
 const animatedElements = document.querySelectorAll('.slideLeft, .slideRight, .slideTop, .slideBottom');
 
-// Intersection Observer setup
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('show'); // trigger animation when visible
+      entry.target.classList.add('show');
     } else {
-      entry.target.classList.remove('show'); // remove animation when out of view
+      entry.target.classList.remove('show'); 
     }
   });
-}, { threshold: 0.4 }); // 0.4 = triggers when 40% visible
+}, { threshold: 0.4 }); 
 
-// Observe all animated elements
 animatedElements.forEach(el => observer.observe(el));

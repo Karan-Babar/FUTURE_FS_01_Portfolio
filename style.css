@@ -207,6 +207,8 @@ body{
     filter: brightness(0) saturate(100%) invert(80%) sepia(63%) saturate(467%) hue-rotate(160deg) brightness(100%) contrast(101%);
     transition: 0.5s ease;
     transform: scale(1.3);
+    width: 16px;
+    height: 16px;
 }
 
 .home-sci a:hover .leetcode-icon {
@@ -237,6 +239,97 @@ body{
 
 .btn-box:hover{
     box-shadow: 0 0 20px cyan;
+}
+@media (max-width: 1280px) {
+.home{
+    padding: 5px 5% 0; 
+}
+.home-content{
+      max-width: 400px;
+       color: white;
+}
+}
+
+@media (max-width: 1000px) {
+.home{
+    padding: 5px 5% 0; 
+}
+.home-content{
+      max-width: 400px;
+       color: white;
+}
+.home-content h3 {
+  font-size: 30px;
+}
+.home-content h3:nth-of-type(2){
+    margin-bottom: 30px;
+}
+.home-content h1 {
+  font-size: 55px;
+  margin: -3px 0;
+}
+.home-content p {
+    font-size: 14px;
+}
+.profile-photo{
+    display: flex;
+     align-items: center;
+}
+}
+
+@media (max-width: 800px) {
+    .home {
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        padding: 100px 5% 50px;
+    }
+    .profile-photo {
+        order: -1;                 
+        margin-bottom: 30px;
+    }
+    .profile-photo img {
+        width: 240px;
+        height: 240px;
+        margin-right: 0;
+    }
+    .home-content {
+        max-width: 100%;
+    }
+    .home-content h3 {
+        font-size: 20px;
+    }
+    .home-content h1 {
+        font-size: 40px;
+    }
+    .home-content p {
+        font-size: 14px;
+        margin-top: -10px;
+    }
+    .home-sci {
+        display: flex;
+        justify-content: center;
+        margin-top: -10px;
+        margin-bottom: -5px;
+    }
+    .home-sci a{
+    width: 40px;
+    height: 40px;
+    border: 2px solid #0ef;
+    font-size: 20px;
+    color: #0ef;
+    margin: 30px 15px 30px 0;
+} 
+.btn-box{
+   padding: 12px 28px;
+   font-size: 16px;
+}
+.leetcode-icon {
+    width: 16px;
+    height: 16px;
+}
 }
 
 .about{

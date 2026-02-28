@@ -434,6 +434,52 @@ body{
     margin-bottom: 3rem;
      animation: slideRight 1s ease forwards;
 }
+@media (max-width: 768px) {
+  .about {
+    display: block;    
+    margin-right: 0;
+    padding: 40px 5%;
+  }
+
+  .about-photo {
+    float: left;            
+    margin: 0 15px 10px 0; 
+    margin-right: 20px;
+  }
+
+  .about-photo img {
+    width: 110px;
+    height: 110px;
+    margin: 0;
+    border: 2px solid #00bcd4;
+  }
+
+  .about-text {
+    text-align: left;
+  }
+  .about-details{
+    margin-top: -10px;
+    margin-bottom: -50px;
+  }
+  .about-text h2 {
+    font-size: 18px;
+    margin-top: 0;
+  }
+
+  .about-text h4 {
+    font-size: 14px;
+  }
+
+  .about-text p {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+  .about::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
 
 .services{
     color: aliceblue;

@@ -42,6 +42,6 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.classList.remove('show'); 
     }
   });
-}, { threshold: 0.3 }); 
+}, { threshold: 0.1 }); 
 
 animatedElements.forEach(el => observer.observe(el));

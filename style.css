@@ -1069,9 +1069,14 @@ body{
         @media (max-width: 968px) {
             .contact-section {
                 grid-template-columns: 1fr;
-                gap: 50px;
+                gap: 0px;
             }
-
+            .left-content p {
+            margin-bottom: 30px;
+            font-size: 16px;
+             margin-left: 40px;
+             margin-right: 40px;
+            }
             .left-content h1 {
                 font-size: 36px;
             }
@@ -1085,11 +1090,23 @@ body{
             .left-content h1 {
                 font-size: 28px;
             }
-
-            .social-btn {
-                width: 45px;
-                height: 45px;
+            .left-content h2 {
+                font-size: 20px;
             }
+            .social-icons {
+            gap: 15px;
+            margin-left: 40px;
+            }
+            .social-btn {
+                width: 40px;
+                height: 40px;
+            }
+            .social-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: #0ef;
+            transition: fill 0.3s ease;
+        }
         }
 
         /* Hide elements initially */
